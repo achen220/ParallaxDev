@@ -2,7 +2,7 @@ import Drawer from "./Drawer"
 import Dropdown from "./Dropdown"
 function Header () {
   return (
-    <div className="navbar shadow-2xl ">
+    <div className="navbar shadow-2xl z-200">
       <div className="flex-none">
         <Drawer />
       </div>

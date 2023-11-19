@@ -12,7 +12,7 @@ body {
 }
 .animationLayer {
   background-position: center bottom;
-  background-size: auto 1038px;  
+  background-size: auto 1028px;  
   background-repeat:repeat-x;
   /* position: absolute; */
 
@@ -21,11 +21,14 @@ body {
   position: fixed;
 }
 
-#background {
+#background1 {
   width: 100%;
   background-image: url('../assets/background.png');
-  border-color: #05141a;
-  border-width: 3px;
+}
+#background2 {
+ width: 100%;
+ background-position: center;
+ background-image: url('../assets/background2.png');
 }
 #foreground1 {
   position: absolute;
@@ -57,3 +60,11 @@ body {
   top: 3%; 
   left: 5%
 } */
+.cloud{ 
+  margin-top:200px;
+  width:350px;
+  height:120px;
+  background:#ECEFF1;
+  box-shadow: 10px 10px rgba(0,0,0,0.2);
+  border-radius:100px;
+}
