@@ -1,42 +1,32 @@
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import './TheParallax.css'
+import Header from './Header'
 function TheParallax () {
   return(
     <>
-      <Parallax pages={1} style={{ top: '0', left: '0' }} className='animation'>
-        <ParallaxLayer>
-          <h1 className='text-white z-100'>white</h1>
-        </ParallaxLayer>
-        <ParallaxLayer offset={0} speed={.05}>
+      <Parallax pages={2} style={{ top: '0', left: '0' }} className='animation text-gray-200'>
+        {/* background */}
+        <ParallaxLayer offset={0} speed={.2}>
           <div className='animationLayer parallax' id='background'></div>
         </ParallaxLayer>
-        <ParallaxLayer offset={0} speed={.12}>
-        <div className="mt-10 relative w-48 h-24 bg-white rounded-full shadow-lg">  
-        </div>
-
-          {/* <div id="cloudBundle" className='flex'>
-            <svg fill="#43505D" version="1.1" id="cloud1" width="120px" height="120px" viewBox="0 0 40.644 40.644" xml:space="preserve">
-
-            <g id="SVGRepo_bgCarrier" stroke-width="0"/>
-
-            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
-
-            <g id="SVGRepo_iconCarrier"> <g> 
-            <path d="M31.133,33.73c-1.312,1.5-3.232,2.45-5.385,2.45c-1.252,0-2.428-0.321-3.449-0.887c-1.48,1.178-3.353,1.889-5.393,1.889 c-2.823,0-5.323-1.356-6.906-3.446H9.64c-5.315,0-9.64-4.324-9.64-9.64c0-3.688,2.055-6.978,5.305-8.604 c-0.081-0.401-0.121-0.807-0.121-1.214c0-3.453,2.809-6.263,6.262-6.263c0.889,0,1.759,0.188,2.561,0.549 c2.331-3.213,6.006-5.104,10.006-5.104c6.832,0,12.39,5.558,12.39,12.389c0,0.09-0.002,0.179-0.006,0.268 c2.635,1.785,4.247,4.789,4.247,7.979C40.644,29.369,36.388,33.66,31.133,33.73z"/> </g> </g>
-
-            </svg>
-            <svg fill="#43505D" version="1.1" id="cloud2" width="120px" height="120px" viewBox="0 0 40.644 40.644" xml:space="preserve">
-
-            <g id="SVGRepo_bgCarrier" stroke-width="0"/>
-
-            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
-
-            <g id="SVGRepo_iconCarrier"> <g> 
-            <path d="M31.133,33.73c-1.312,1.5-3.232,2.45-5.385,2.45c-1.252,0-2.428-0.321-3.449-0.887c-1.48,1.178-3.353,1.889-5.393,1.889 c-2.823,0-5.323-1.356-6.906-3.446H9.64c-5.315,0-9.64-4.324-9.64-9.64c0-3.688,2.055-6.978,5.305-8.604 c-0.081-0.401-0.121-0.807-0.121-1.214c0-3.453,2.809-6.263,6.262-6.263c0.889,0,1.759,0.188,2.561,0.549 c2.331-3.213,6.006-5.104,10.006-5.104c6.832,0,12.39,5.558,12.39,12.389c0,0.09-0.002,0.179-0.006,0.268 c2.635,1.785,4.247,4.789,4.247,7.979C40.644,29.369,36.388,33.66,31.133,33.73z"/> </g> </g>
-            </svg>
-          </div> */}
+        {/* Hi I'm Aaron */}
+        <ParallaxLayer offset={0} speed={-1}>
+          <h1 className='animationLayer parallax absolute top-1/3 left-1/2 -translate-x-1/2 text-6xl text-gray-200 font-bold'>Hello,
+          <br />
+          I'm Aaron
+          </h1>
         </ParallaxLayer>
-        <ParallaxLayer offset={0} speed={1}>
+        {/* Clouds */}
+        <ParallaxLayer offset={0} speed={.5} >
+          <div className="absolute flex top-20 left-10 bg-[#50435d] w-48 h-24 rounded-full shadow-lg z-0">  
+          </div>
+          <div className="absolute top-16 right-1/3 w-48 h-24 bg-[#50435d] rounded-full shadow-lg">  
+          </div>
+          <div className="absolute top-12 right-10 w-48 h-24 bg-[#50435d] rounded-full shadow-lg">  
+          </div>
+        </ParallaxLayer>
+        {/* Buildings */}
+        <ParallaxLayer offset={0} speed={.10}>
           <svg fill="black" version="1.1" id="foreground1"
           width="400px" height="400px" viewBox="0 0 60.207 60.206"
           xml:space="preserve">
@@ -50,7 +40,7 @@ function TheParallax () {
             </g>
           </svg>
         </ParallaxLayer>
-        <ParallaxLayer offset={0} speed={1.3}>
+        <ParallaxLayer offset={0} speed={.15}>
           <svg fill="#000000" version="1.1" id="foreground2" 
           width="400px" height="400px" viewBox="0 0 58.333 58.333"
           xml:space="preserve" >
@@ -66,7 +56,7 @@ function TheParallax () {
             </g>
           </svg>          
         </ParallaxLayer>
-        <ParallaxLayer offset={0} speed={1.5}>
+        <ParallaxLayer offset={0} speed={.15} >
           <svg fill="#000000" version="1.1" id="foreground3"
           width="400px" height="400px" viewBox="0 0 56.571 56.571"
           xml:space="preserve">
@@ -111,7 +101,7 @@ function TheParallax () {
             </g>
           </svg>
         </ParallaxLayer>
-        <ParallaxLayer offset={0} speed={.5}>
+        <ParallaxLayer offset={0} speed={.10}>
           <svg fill="black" version="1.1" id="foreground4"
           width="400px" height="400px" viewBox="0 0 60.207 60.206"
           xml:space="preserve">
@@ -124,6 +114,10 @@ function TheParallax () {
                 M54.582,40.779h-2.604V30.3h2.604V40.779z"/>
             </g>
           </svg>
+        </ParallaxLayer>
+        {/* Headers */}
+        <ParallaxLayer offset={0} speed={-1}>
+          <Header/>
         </ParallaxLayer>
       </Parallax>
     </>

@@ -1,6 +1,6 @@
 body {
   height: 5000px;
-  background-color: #fcb3a3;
+  background-color: #05141a;
 }
 .animation, .animationLayer {
   height: 100%;
@@ -24,6 +24,8 @@ body {
 #background {
   width: 100%;
   background-image: url('../assets/background.png');
+  border-color: #05141a;
+  border-width: 3px;
 }
 #foreground1 {
   position: absolute;
