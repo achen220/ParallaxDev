@@ -1,7 +1,3 @@
-body {
-  height: 5000px;
-  background-color: #05141a;
-}
 .animation, .animationLayer {
   height: 100%;
 }
@@ -20,15 +16,16 @@ body {
 .animationLayer.parallax {
   position: fixed;
 }
-
+.items2 {
+  color: #05141A;
+}
 #background1 {
   width: 100%;
   background-image: url('../assets/background.png');
 }
 #background2 {
- width: 100%;
- background-position: center;
- background-image: url('../assets/background2.png');
+  width: 100%;
+  background-color:#FCB3A3;
 }
 #foreground1 {
   position: absolute;

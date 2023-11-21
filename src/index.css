@@ -5,3 +5,6 @@
 html {
   font-family: 'Source Code Pro', monospace;
 }
+body {
+  background-color: black;
+}

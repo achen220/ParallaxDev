@@ -1,20 +1,21 @@
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import './TheParallax.css'
-import Header from './Header'
-import ModalMe from './ModalMe'
+// import Header from './Header'
+// import ModalMe from './ModalMe'
 function TheParallax () {
   return(
     <>
-      <Parallax pages={3} style={{ top: '0', left: '0' }} className='animation text-gray-200'>
+      <Parallax pages={2} style={{ top: '0', left: '0' }} className='animation text-gray-200'>
         {/* backgrounds */}
-        <ParallaxLayer offset={0} speed={1}>
+        <ParallaxLayer offset={0} speed={.2}>
           <div className='animationLayer parallax' id='background1'></div>
         </ParallaxLayer>
-        <ParallaxLayer offset={1} speed={1}>
-          <div className='animationLayer parallax' id='background2'></div>
+        <ParallaxLayer offset={1} speed={.2}>
+          {/* <div className='animationLayer parallax' id='background2'></div> */}
+          <div id="background2" className='animationLayer parallax'></div>
         </ParallaxLayer>
         {/* Hi I'm Aaron */}
-        <ParallaxLayer offset={0} speed={-.5}>
+        <ParallaxLayer offset={0} speed={-.17}>
           <h1 className='animationLayer parallax absolute top-1/3 left-1/2 -translate-x-1/2 text-6xl max-lg:text-4xl max-md:text-2xl max-sm:text-lg text-gray-200 font-bold'>
             Hello,
           <br />
@@ -22,7 +23,7 @@ function TheParallax () {
           </h1>
         </ParallaxLayer>
         {/* Clouds */}
-        <ParallaxLayer offset={0} speed={.5} >
+        <ParallaxLayer offset={0} speed={.12} >
           <div className="animationLayer parallax absolute flex top-20 left-10 bg-[#50435d] w-48 h-24 rounded-full shadow-lg">  
           </div>
           <div className="animationLayer parallax absolute top-16 right-1/3 w-48 h-24 bg-[#50435d] rounded-full shadow-lg">  
@@ -31,9 +32,9 @@ function TheParallax () {
           </div>
         </ParallaxLayer>
         {/* Buildings */}
-        <ParallaxLayer offset={0} speed={.75}>
+        <ParallaxLayer offset={0} speed={.15}>
           <svg fill="black" version="1.1" id="foreground1"
-          width="400px" height="400px" viewBox="0 0 60.207 60.206"
+          width="300px" height="300px" viewBox="0 0 60.207 60.206"
           xml:space="preserve">
             <g transform="translate(0, 6)">
               <path d="M51.751,23.435V5.474h-7.106v25.975h-4.083V19.958H30.103v-7.862h-9.197v18.442h-2.282v-5.742H7.902v-7.862H0v7.862v5.742
@@ -44,10 +45,8 @@ function TheParallax () {
                 M54.582,40.779h-2.604V30.3h2.604V40.779z"/>
             </g>
           </svg>
-        </ParallaxLayer>
-        <ParallaxLayer offset={0} speed={.9}>
           <svg fill="#000000" version="1.1" id="foreground2" 
-          width="400px" height="400px" viewBox="0 0 58.333 58.333"
+          width="300px" height="300px" viewBox="0 0 58.333 58.333"
           xml:space="preserve" >
             <g transform="translate(0, 6)">
             <path d="M54.687,50.825V12.891L39.062,3.516v47.31h-2.864V29.112c0-2.302-1.865-4.167-4.167-4.167h-9.896v23.622h-1.042V16.642
@@ -59,11 +58,9 @@ function TheParallax () {
             M6.944,19.129h4.167v4.167H6.944V19.129z M6.944,26.595h4.167v4.167H6.944V26.595z M6.944,34.158h4.167v4.167H6.944V34.158z
             M6.944,41.623h4.167v4.167H6.944V41.623z"/>
             </g>
-          </svg>          
-        </ParallaxLayer>
-        <ParallaxLayer offset={0} speed={.9} >
+          </svg>  
           <svg fill="#000000" version="1.1" id="foreground3"
-          width="400px" height="400px" viewBox="0 0 56.571 56.571"
+          width="300px" height="300px" viewBox="0 0 56.571 56.571"
           xml:space="preserve">
             <g transform="translate(0, 6)">
             <path d="M53.009,44.503V22.875c0-1.724-1.378-3.356-3.079-3.646l-1.18-0.201c-1.701-0.29-4.451-0.269-6.148,0.047l-0.573,0.106
@@ -104,11 +101,9 @@ function TheParallax () {
             v2.448H4.982V29.243z M4.982,33.264h0.853v2.448H4.982V33.264z M4.982,37.286h0.853v2.447H4.982V37.286z M4.982,41.309h0.853v1.851
             H4.982V41.309z"/>
             </g>
-          </svg>
-        </ParallaxLayer>
-        <ParallaxLayer offset={0} speed={.75}>
+          </svg> 
           <svg fill="black" version="1.1" id="foreground4"
-          width="400px" height="400px" viewBox="0 0 60.207 60.206"
+          width="300px" height="300px" viewBox="0 0 60.207 60.206"
           >
             <g transform="translate(0, 6)">
               <path d="M51.751,23.435V5.474h-7.106v25.975h-4.083V19.958H30.103v-7.862h-9.197v18.442h-2.282v-5.742H7.902v-7.862H0v7.862v5.742
@@ -120,19 +115,22 @@ function TheParallax () {
             </g>
           </svg>
         </ParallaxLayer>
-        {/* rat */}
-        <ParallaxLayer offset={1} speed={.75} >
-          <svg className='absolute top-[67%] left-1/3' width="100px" height="100px" viewBox="0 0 512 512" aria-hidden="true" role="img" preserveAspectRatio="xMidYMid meet"><path fill="#F4B5C8" d="M112.816 293.123l-4.064.023c-.693-.007-1.338.031-2.071.064l-2.397.102c-.858.025-1.84.139-2.855.211c-1.023.083-2.112.157-3.249.314c-4.566.506-10.081 1.419-16.144 3.187c-6.043 1.758-12.702 4.38-18.94 8.485c-3.11 2.045-6.101 4.461-8.692 7.28c-2.587 2.813-4.797 6.029-6.141 9.572c-2.925 7.02-2.027 15.364 2.65 23.123c2.286 3.878 5.394 7.577 9.021 10.971c3.628 3.401 7.763 6.508 12.172 9.363a125.153 125.153 0 0 0 13.988 7.825c2.41 1.232 4.937 2.282 7.421 3.414c2.536 1.036 5.054 2.121 7.636 3.079c20.608 7.824 42.492 12.797 63.155 16.312c10.34 1.783 20.424 3.097 30.005 4.207l7.093.779c2.331.249 4.633.44 6.894.657c4.521.449 8.9.778 13.105 1.097c4.202.352 8.24.566 12.078.81c3.837.259 7.483.419 10.91.578c6.851.362 12.834.497 17.759.675c4.926.144 8.8.185 11.441.247l4.049.079l.048.001a3.65 3.65 0 0 1-.048 7.298l-4.078.026c-2.66.006-6.561.065-11.528.049c-4.967-.05-11-.03-17.921-.217c-3.461-.072-7.144-.137-11.026-.299c-3.882-.146-7.966-.257-12.225-.502c-4.26-.212-8.698-.431-13.288-.766c-2.295-.161-4.631-.294-7.001-.485l-7.213-.603c-9.751-.874-20.034-1.944-30.635-3.49c-21.191-3.052-43.774-7.53-65.705-15.203c-2.745-.939-5.453-2.02-8.172-3.052c-2.688-1.138-5.402-2.19-8.046-3.451a137.801 137.801 0 0 1-15.544-8.182c-5.011-3.065-9.838-6.483-14.281-10.432c-4.434-3.947-8.495-8.444-11.743-13.616c-.802-1.301-1.602-2.595-2.264-3.995c-.339-.692-.711-1.36-1.013-2.072l-.876-2.152c-.141-.36-.294-.714-.424-1.079l-.35-1.116l-.682-2.23l-.497-2.29l-.238-1.144c-.064-.385-.102-.776-.153-1.163l-.271-2.324c-.043-.778-.055-1.559-.077-2.336l-.024-1.165c.008-.387.042-.774.063-1.161l.161-2.312c.421-3.04 1.02-6.048 2.09-8.811c1.984-5.61 5.137-10.389 8.617-14.387c3.495-4.01 7.361-7.269 11.259-9.985c7.824-5.431 15.75-8.736 22.848-11.016c7.119-2.277 13.48-3.49 18.724-4.214c1.31-.212 2.554-.333 3.725-.459c1.179-.116 2.248-.265 3.31-.329l2.922-.199c.894-.06 1.726-.12 2.358-.129l4.062-.129a8.336 8.336 0 1 1 .312 16.667z"></path><path fill="#4A5E66" d="M362.835 254.108c-4.412-16.855 4.232-35.056 21.339-41.756c16.229-6.356 34.99.348 43.514 15.551c8.939 15.943 4.184 35.381-9.744 45.664c-3.234 2.388-7.469 2.956-11.255 1.603l-36.484-13.039a11.673 11.673 0 0 1-7.37-8.023z"></path><path fill="#657F8C" d="M472.538 303.833c-46.712-49.859-142.596-134.245-269.274-151.809l.025-.003l-4.797-1.698a2.242 2.242 0 0 1-1.317-3.073l1.099-2.455c.345-.769-.503-1.539-1.447-1.315l-31.155 4.764c-1.555.238-2.725-1.164-1.923-2.305l4.436-6.309c.54-.768-.289-1.701-1.32-1.48c-9.999 2.138-44.872 10.546-65.257 27.613c-25.078 17.341-41.512 46.295-41.512 79.093c0 53.074 43.025 96.099 96.099 96.099h300.239c19.303 0 29.3-23.037 16.104-37.122z"></path><path fill="#2B3B47" d="M430.564 287.132a7.633 7.633 0 0 0-8.004 7.242l-.659 13.182a7.633 7.633 0 0 0 15.246.762l.659-13.182a7.632 7.632 0 0 0-7.242-8.004z"></path><path fill="#7C99A5" d="M369.804 278.887c-16.507-5.573-26.968-22.794-23.169-40.769c3.604-17.053 19.513-29.046 36.899-27.817c18.232 1.289 31.862 15.94 32.803 33.227c.218 4.014-1.633 7.865-4.843 10.285l-30.938 23.323a11.665 11.665 0 0 1-10.752 1.751zM255.842 303.74h-38.477a77.796 77.796 0 0 0 7.359-33.106c0-43.143-34.974-78.117-78.117-78.117c-43.143 0-78.117 34.974-78.117 78.117c0 43.143 34.974 78.117 78.117 78.117h109.234c12.429 0 22.505-10.076 22.505-22.505c.001-12.43-10.075-22.506-22.504-22.506z"></path><path fill="#F4B5C8" d="M381.294 276.671c-12.903-1.811-21.896-13.739-20.085-26.642c1.811-12.903 13.739-21.896 26.642-20.085s21.896 13.739 20.085 26.642l-26.642 20.085z"></path></svg>
+        <ParallaxLayer offset={1}>
+          <h1 className='items2 absolute top-[10%] left-[5%] text-8xl text-[#05141A] font-bold'>About Me</h1>
         </ParallaxLayer>
-        {/* me */}
-        <ParallaxLayer offset={1} speed={.5} >
-          <ModalMe />
-          <div className="chat chat-end absolute top-[45%] left-[35%]">
-            <div className="chat-bubble">
-              Click Me
-            </div>
-          </div>
+        <ParallaxLayer offset={1}>
+          <img className="items2 w-[300px] absolute top-1/3 left-[5%]" src="/public/profile.jpg" alt="profilePic" />
+
         </ParallaxLayer>
+        <ParallaxLayer offset={1}>
+          <ul className='items2 absolute left-[5%] bottom-[12%] '>
+            <li>Occupation: Software Engineer</li>
+            <li>Education: BA in Biochemistry @ Hunter College</li>
+            <li>Languages: Javascript/Typescript, Python</li>
+            <li>Technologies: Angular, React, Next, Node, Express, Flask</li>
+          </ul>
+        </ParallaxLayer>
+
       </Parallax>
     </>
   )
