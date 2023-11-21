@@ -1,5 +1,7 @@
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import './TheParallax.css'
+import Experiences from './Experiences'
+
 // import Header from './Header'
 // import ModalMe from './ModalMe'
 function TheParallax () {
@@ -115,22 +117,21 @@ function TheParallax () {
             </g>
           </svg>
         </ParallaxLayer>
-        <ParallaxLayer offset={1}>
-          <h1 className='items2 absolute top-[10%] left-[5%] text-8xl text-[#05141A] font-bold'>About Me</h1>
+        <ParallaxLayer offset={1} >
+          <div className="container grid grid-cols-2 h-full mx-auto items-center max-md:flex max-md:flex-col max-sm:mx-5">
+            <div className="h-full flex flex-col justify-evenly">
+              <h1 className='items2 text-8xl text-[#05141A] font-bold max-md:text-6xl max-sm:text-4xl'>About Me</h1>
+              <img className="items2 w-[300px] max-md:hidden" src="/public/profile.jpg" alt="profilePic" />
+              <ul className='items2 max-md:hidden"'>
+                <li>Occupation: Software Engineer</li>
+                <li>Education: BA in Biochemistry @ Hunter College</li>
+                <li>Languages: Javascript/Typescript, Python</li>
+                <li>Technologies: Angular, React, Next, Node, Express, Flask</li>
+              </ul>
+            </div>
+            <Experiences/>
+          </div>
         </ParallaxLayer>
-        <ParallaxLayer offset={1}>
-          <img className="items2 w-[300px] absolute top-1/3 left-[5%]" src="/public/profile.jpg" alt="profilePic" />
-
-        </ParallaxLayer>
-        <ParallaxLayer offset={1}>
-          <ul className='items2 absolute left-[5%] bottom-[12%] '>
-            <li>Occupation: Software Engineer</li>
-            <li>Education: BA in Biochemistry @ Hunter College</li>
-            <li>Languages: Javascript/Typescript, Python</li>
-            <li>Technologies: Angular, React, Next, Node, Express, Flask</li>
-          </ul>
-        </ParallaxLayer>
-
       </Parallax>
     </>
   )

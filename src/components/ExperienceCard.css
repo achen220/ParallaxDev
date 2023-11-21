@@ -1,0 +1,24 @@
+#companyImage, #backCard {
+  /* background-image: url("/assets/ideon.jpeg"); */
+  background-size:contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#experienceCard {
+  transition: transform 800ms;
+  transform-style: preserve-3d;
+}
+#experienceCardContainer:hover > #experienceCard {
+  cursor: pointer;
+  transform: rotateY(180deg);
+}
+#experienceCardContainer {
+  perspective: 800px;
+}
+#frontCard, #backCard {
+  backface-visibility: hidden;
+}
+
+#backCard {
+  transform: rotateY(180deg);
+}
