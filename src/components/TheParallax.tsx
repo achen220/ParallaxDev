@@ -117,8 +117,8 @@ function TheParallax () {
             </g>
           </svg>
         </ParallaxLayer>
-        <ParallaxLayer offset={1} >
-          <div className="container grid grid-cols-2 h-full mx-auto items-center max-md:flex max-md:flex-col max-sm:mx-5">
+        <ParallaxLayer offset={1} style={{width: "100%"}}>
+          <div className="container grid grid-cols-2 h-full mx-auto items-center max-md:flex max-md:flex-col ">
             <div className="h-full flex flex-col justify-evenly">
               <h1 className='items2 text-8xl text-[#05141A] font-bold max-md:text-6xl max-sm:text-4xl'>About Me</h1>
               <img className="items2 w-[300px] max-md:hidden" src="/public/profile.jpg" alt="profilePic" />
